@@ -6,7 +6,7 @@ module.exports = {
     entry: path.resolve(__dirname, 'src','index.js'),
     output: {
       path: path.resolve(__dirname, 'build'),
-      filename: 'bundle[hash].js',
+      filename: 'budle[hash].js',
     },
     plugins : [
       new  HtmlWebpackPlugin({

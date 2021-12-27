@@ -20,6 +20,9 @@ export default function Post (props){
 
 Post.propTypes = {
     likes: PropTypes.number.isRequired,
-    post: PropTypes.shape().isRequired,
+    post: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        subtitle: PropTypes.string.isRequired,
+    }).isRequired,
 };
 
