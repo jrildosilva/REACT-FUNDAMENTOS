@@ -28,7 +28,7 @@ function App() {
           {posts.map(post => (
               
               <Post
-                key={post.}
+                key={post.title}
                 likes= {post.likes}
                 post={{
                     title: post.title,
