@@ -1,10 +1,9 @@
 import React, {useState} from 'react';
 
 import Post  from '../Post';
-
 import Header from '../Header';
 import {ThemeProvider} from '../../Context/ThemeContext';
-import styles from './App.scss';
+
 import {Title} from './Stlyles';
 
 
