@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const Container = slyled.header`
-  backgroud: #111;
+export const Container = styled.header`
+  background: ${({theme}) => theme.headerBackgroundColor};
   height: 100px;
-  diplay: flex;
-  align-items: center:
+  display: flex;
+  align-items: center;
   padding: 0 24px;
   border-radius: 10px;
   justify-content: space-between;
