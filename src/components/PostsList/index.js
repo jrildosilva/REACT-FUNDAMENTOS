@@ -5,7 +5,7 @@ import Post from './Post';
 
 import posts from './posts';
 
-export default function PostsList () {
+export default function PostsList() {
     
       return (
         
@@ -15,7 +15,7 @@ export default function PostsList () {
                   <Post
                      Key= {post.id}
                      title= {post.title}
-                     decription={post.description}
+                     description={post.description}
                    />
                 ))}
                  

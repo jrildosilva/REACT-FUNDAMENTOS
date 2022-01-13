@@ -5,7 +5,6 @@ import GlobalStyle from './styles/global';
 import Layout from './components/Layout';
 
 import themes from './styles/themes';
-import light from './styles/themes/light';
 
 
 
@@ -19,7 +18,7 @@ function App() {
     function handleToggleTheme() {
         setTheme(prevState => prevState == 'dark' ? 'light' : 'dark');
     } 
-
+    
     return (
         < ThemeProvider theme={currentTheme}>
            <GlobalStyle />
