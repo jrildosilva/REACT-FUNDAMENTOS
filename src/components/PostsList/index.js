@@ -5,17 +5,19 @@ import Post from './Post';
 
 import posts from './posts';
 
-export default function PostsList() {
+export default class PostsList extends React.Component {
+    render(){
+//export default function PostsList() {
     
-      return (
+     return (
         
         <Container >
 
-                {posts.map((post) => (
-                  <Post
+               {posts.map((post) => (
+                 <Post
                      Key= {post.id}
                      title= {post.title}
-                     description={post.description}
+                    description={post.description}
                    />
                 ))}
                  
@@ -24,8 +26,8 @@ export default function PostsList() {
         
         
         
-    );
+   );
+ }
 }
-
 
 
