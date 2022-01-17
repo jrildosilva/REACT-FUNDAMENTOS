@@ -1,4 +1,4 @@
-import React, {useState, useMemo, useEffect,useLayoutEffect} from 'react';
+import React, {useState, useMemo, useEffect, useRef} from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from './styles/global';
@@ -10,6 +10,7 @@ import themes from './styles/themes';
 
 function App() {
     const [theme, setTheme] = useState('dark');
+   const firstRender = useRef(true);
 
     const currentTheme = useMemo(() => {
         return themes[theme] || themes.dark;;
@@ -20,8 +21,11 @@ function App() {
     } 
     
     useEffect(() => {
-        for (let i = 0; i <= 15000 ; i++)
-        console.debug(i);
+        if (firstRender.current) {
+            firstRender.current = false;
+            return;
+        }
+        console.debug({theme});
     }, [theme]);
 
 
