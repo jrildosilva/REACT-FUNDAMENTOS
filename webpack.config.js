@@ -32,6 +32,7 @@ module.exports = {
                options: {
                  modules: true,
                },
+               
              },
              'sass-loader',
             ],

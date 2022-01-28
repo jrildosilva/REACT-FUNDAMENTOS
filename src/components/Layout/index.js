@@ -1,13 +1,13 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import Header from '../Header';
 import PostsList from '../PostsList';
 import Footer from '../Footer';
 
 
 export default function Layout({ 
-      onToggleTheme, 
-      selectedTheme  
+      onToggleTheme,  selectedTheme,
+       
     }) {
      
      
@@ -27,3 +27,7 @@ export default function Layout({
         </>
     );
 }
+
+Layout.propTypes = {
+  selectedTheme: PropTypes.string.isRequired,
+};

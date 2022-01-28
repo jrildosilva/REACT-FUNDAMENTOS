@@ -6,9 +6,8 @@ import Post from './Post';
 import posts from './posts';
 
 export default class PostsList extends React.Component {
-    render(){
-//export default function PostsList() {
-    
+    render() {
+   
      return (
         
         <Container >
