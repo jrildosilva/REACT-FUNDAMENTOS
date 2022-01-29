@@ -11,14 +11,11 @@ class App extends React.Component {
        return (
             <ThemeProvider>
                <ThemeContext.Consumer>
-                 {({ theme,handleToggleTheme, }) => (
-                   < StyledThemeProvider theme={themes[theme] || themes.dark}>
-                   <GlobalStyle />
-                   <Layout 
-                     onToggleTheme={handleToggleTheme}
-                     selectedTheme={theme}
-                   /> 
-                </ StyledThemeProvider >
+                 {({ theme}) => (
+                  < StyledThemeProvider theme={themes[theme] || themes.dark}>
+                     <GlobalStyle />
+                     <Layout /> 
+                  </ StyledThemeProvider >
                  )}
 
                </ThemeContext.Consumer>     
