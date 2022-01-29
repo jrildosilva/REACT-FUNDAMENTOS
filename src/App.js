@@ -8,16 +8,35 @@ import themes from './styles/themes';
 
 class App extends React.Component {
      state = {
-       change: false,
+       changed: false,
      };
       componentDidMount() {
         console.log('componentDidMount executed');
       }
 
+      componentDidUpdate(prevProps, prevState ) {
+           console.log('componentUpdate',{
+              currentState: this.state,
+              prevState,
+              prevProps,
 
+           });
+      }
+      componentDidCatch(error, info) {
+        console.log('I cam, eu acredito',{error, info});
+      }
+      
+      shouldComponentUpdate(nextProps, nextState) {
+        console.log('shouldCoponentUpdate',{
+          currentState: this.state,
+          nextState,
+          nextProps,
+        });
+        return true;
+      }
 
       render() { 
-        console.log(' josé Rildo diz: tudo posso quando quero');     
+        console.log(' Método renderizou: tudo posso quando quero');     
        return (
             <ThemeProvider>
                <button onClick={() => this.setState({changed: true})}>Change state</button>
