@@ -35,18 +35,30 @@ class App extends React.Component {
         return true;
       }
 
+      componentWillUnmount() {
+
+      }
+
       render() { 
         console.log(' Método renderizou: tudo posso quando quero');     
        return (
             <ThemeProvider>
-               <button onClick={() => this.setState({changed: true})}>Change state</button>
                <ThemeContext.Consumer>
-                 {({ theme}) => (
+                 {({ theme, handleToggleTheme}) => (
                   < StyledThemeProvider theme={themes[theme] || themes.dark}>
                      <GlobalStyle />
-                     <Layout /> 
-                  </ StyledThemeProvider >
-                 )}
+                     <button onClick={handleToggleTheme}>
+                       Change state
+                     </button>
+                      { theme === 'dark' &&  <Layout /> }
+                      <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                      <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                      <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                      <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                      <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                      <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                </ StyledThemeProvider >
+              )}
 
                </ThemeContext.Consumer>     
             </ThemeProvider>
