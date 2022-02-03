@@ -6,7 +6,7 @@ import Layout from './components/Layout';
 import {ThemeProvider, ThemeContext } from './contexts/ThemeContext';
 import themes from './styles/themes';
 
-class App extends React.Component {
+export class App extends React.Component {
      state = {
        changed: false,
      };
@@ -45,12 +45,12 @@ class App extends React.Component {
             <ThemeProvider>
                <ThemeContext.Consumer>
                  {({ theme, handleToggleTheme}) => (
-                  < StyledThemeProvider theme={themes[theme] || themes.dark}>
+                  < StyledThemeProvider theme={themes[theme] || theme.dark}>
                      <GlobalStyle />
-                     <button onClick={handleToggleTheme}>
+                     <button type='button' onClick={handleToggleTheme}>
                        Change state
                      </button>
-                      { theme === 'dark' &&  <Layout /> }
+                      { theme == 'dark' &&  <Layout /> }
                       <br/><br/><br/><br/><br/><br/><br/><br/><br/>
                       <br/><br/><br/><br/><br/><br/><br/><br/><br/>
                       <br/><br/><br/><br/><br/><br/><br/><br/><br/>

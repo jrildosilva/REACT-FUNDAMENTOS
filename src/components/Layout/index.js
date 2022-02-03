@@ -6,7 +6,7 @@ import Footer from '../Footer';
 
 import Routes from '../../Routers';
 
-import { Nav} from './styles';
+import { Nav } from './styles';
 
 export default function Layout() { 
   return (
@@ -15,6 +15,7 @@ export default function Layout() {
       <Nav>
         <Link to="/">Home</Link>
         <Link to="/posts">Posts</Link>
+        <Link to="/posts/1232244555">Post</Link>
       </Nav>
       <Routes />
       <Footer />
