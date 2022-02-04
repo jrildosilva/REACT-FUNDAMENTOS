@@ -1,10 +1,16 @@
 import React, { Component, useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import { ThemeContext} from '../../contexts/ThemeContext';
 
 import { Container } from './styles';
 export default class Header extends Component {
+  
+  handleNavigate = ()=> { 
+    this.props.history.push('/');
+};
   render() {
+    
    return (
       <ThemeContext.Consumer>
         {(value) => (
@@ -17,7 +23,9 @@ export default class Header extends Component {
               {value.theme === 'dark' ? '🌞' : '😎'}
             
           </button>
-         
+          <button onClick={this.handleNavigate} style={{color: '#fff'}}>
+                Voltar para minha lista home
+                </button>
          </Container>
         )}
       </ThemeContext.Consumer>

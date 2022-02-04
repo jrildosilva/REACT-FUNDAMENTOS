@@ -8,7 +8,7 @@ import Routes from '../../Routers';
 
 import { Nav } from './styles';
 
-export default function Layout() { 
+export default function Layout() {
   return (
     <BrowserRouter>
       <Header />
