@@ -31,7 +31,7 @@ export default class Post extends React.Component{
                 Voltar para minha lista de posts
                 </button>
             
-             <h1>Post page</h1>;
+             <h1>Post page</h1>
             
             </>
     
